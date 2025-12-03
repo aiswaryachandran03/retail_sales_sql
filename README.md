@@ -19,9 +19,9 @@ This project is suitable for beginners looking to strengthen their SQL fundament
 ## Project Structure
 ### 1. Database Setup
 
-_**Database Creation**: Create a database named p1_retail_db.
+**Database Creation**: Create a database named p1_retail_db.
 
-_**Table Creation**: Create a retail_sales table with columns for transaction ID, date, time, customer ID, gender, age, category, quantity, price per unit, COGS, and total sale amount.
+**Table Creation**: Create a retail_sales table with columns for transaction ID, date, time, customer ID, gender, age, category, quantity, price per unit, COGS, and total sale amount.
 
 ```sql
 CREATE DATABASE p1_retail_db;
@@ -44,22 +44,22 @@ CREATE TABLE retail_sales
 
 ### 2. Data Exploration & Cleaning
 
-_**Record Count** 
+**Record Count** 
 ```sql
 SELECT COUNT(*) FROM retail_sales;
 ```
 
-_**Customer Count**
+**Customer Count**
 ```sql
 SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
 ```
 
-_**Category Count**
+**Category Count**
 ```sql
 SELECT DISTINCT category FROM retail_sales;
 ```
 
-_**Null Value Check**
+**Null Value Check**
 ```sql
 SELECT * FROM retail_sales
 WHERE 
@@ -68,7 +68,7 @@ WHERE
     quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
 ```
 
-_**Deleting Null Records**
+**Deleting Null Records**
 ```sql
 DELETE FROM retail_sales
 WHERE 
@@ -222,5 +222,6 @@ The findings help understand customer behavior, product performance, and sales t
 3. **Execute the analysis queries**
 
 4. **Modify and experiment with your own analysis**
+
 
 
