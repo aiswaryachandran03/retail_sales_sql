@@ -82,36 +82,47 @@ WHERE
 Below are SQL queries created to answer key business questions:
 
 1. **Retrieve all columns for sales made on 2022-11-05**
+```sql
 SELECT *
 FROM retail_sales
 WHERE sale_date = '2022-11-05';
+```
 
 2. **Retrieve all clothing transactions with quantity > 4 in November 2022**
+```sql
 SELECT *
 FROM retail_sales
 WHERE category = 'Clothing'
   AND TO_CHAR(sale_date, 'YYYY-MM') = '2022-11'
   AND quantity >= 4;
+```
 
 3. **Calculate total sales for each category**
+```sql
 SELECT 
     category,
     SUM(total_sale) AS net_sale,
     COUNT(*) AS total_orders
 FROM retail_sales
 GROUP BY 1;
+```
 
 4. **Average age of customers who purchased items from the Beauty category**
+```sql
 SELECT ROUND(AVG(age), 2) AS avg_age
 FROM retail_sales
 WHERE category = 'Beauty';
+```
 
 5. **Find all transactions where the total sale is greater than 1000**
+```sql
 SELECT *
 FROM retail_sales
 WHERE total_sale > 1000;
+```
 
 6. **Find the total number of transactions by gender in each category**
+```sql
 SELECT 
     category,
     gender,
@@ -119,8 +130,10 @@ SELECT
 FROM retail_sales
 GROUP BY category, gender
 ORDER BY 1;
+```
 
 7. **Find the best-selling month of each year based on average sales**
+```sql
 SELECT year, month, avg_sale
 FROM
 (
@@ -136,8 +149,10 @@ FROM
     GROUP BY 1, 2
 ) AS t1
 WHERE rank = 1;
+```
 
 8. **Top 5 customers based on total sales**
+```sql
 SELECT 
     customer_id,
     SUM(total_sale) AS total_sales
@@ -145,15 +160,19 @@ FROM retail_sales
 GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 5;
+```
 
 9. **Number of unique customers per category**
+```sql
 SELECT 
     category,
     COUNT(DISTINCT customer_id) AS cnt_unique_cs
 FROM retail_sales
 GROUP BY category;
+```
 
 10. **Create sales shifts: Morning (<12), Afternoon (12–17), Evening (>17)**
+```sql
 WITH hourly_sale AS
 (
     SELECT *,
@@ -169,6 +188,7 @@ SELECT
     COUNT(*) AS total_orders
 FROM hourly_sale
 GROUP BY shift;
+```
 
 ### Findings
 
@@ -202,3 +222,4 @@ The findings help understand customer behavior, product performance, and sales t
 3. **Execute the analysis queries**
 
 4. **Modify and experiment with your own analysis**
+
