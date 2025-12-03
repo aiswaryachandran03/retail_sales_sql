@@ -192,21 +192,21 @@ GROUP BY shift;
 
 ### Findings
 
-_**Customer Demographics**: The dataset includes customers across different age groups and categories.
+**Customer Demographics**: The dataset includes customers across different age groups and categories.
 
-_**High-Value Transactions**: Transactions above 1000 indicate premium product purchases.
+**High-Value Transactions**: Transactions above 1000 indicate premium product purchases.
 
-_**Sales Trends**: Monthly breakdown reveals peak-performing months.
+**Sales Trends**: Monthly breakdown reveals peak-performing months.
 
-_**Customer Insights**: Identifies top customers and category-level unique customer counts.
+**Customer Insights**: Identifies top customers and category-level unique customer counts.
 
 ### Reports
 
-_**Sales Summary**: Overview of total sales, categories, and demographics.
+**Sales Summary**: Overview of total sales, categories, and demographics.
 
-_**Trend Analysis**: Monthly, category-wise, and shift-based sales patterns.
+**Trend Analysis**: Monthly, category-wise, and shift-based sales patterns.
 
-_**Customer Insights**: Top customers and repeat purchase behavior.
+**Customer Insights**: Top customers and repeat purchase behavior.
 
 ## Conclusion
 
@@ -222,4 +222,5 @@ The findings help understand customer behavior, product performance, and sales t
 3. **Execute the analysis queries**
 
 4. **Modify and experiment with your own analysis**
+
 
